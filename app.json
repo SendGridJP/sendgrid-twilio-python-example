@@ -1,5 +1,5 @@
 {
-  "name": "SendGrid to Twilio Python Example",
+  "name": "SendGrid to Twilio",
   "env": {
     "TWILIO_ACCOUNT_SID": {
       "description": "Twilio Account SID"
