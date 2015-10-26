@@ -2,16 +2,16 @@
   "name": "SendGrid to Twilio Python Example",
   "env": {
     "TWILIO_ACCOUNT_SID": {
-      "description": "Twilio Account SID",
+      "description": "Twilio Account SID"
     },
     "TWILIO_AUTH_TOKEN": {
-      "description": "Twilio Auth Token",
+      "description": "Twilio Auth Token"
     },
     "TWILIO_PHONE_NUMBER": {
-      "description": "Twilio Phone Number",
+      "description": "Twilio Phone Number"
     },
     "YOUR_PHONE_NUMBER": {
-      "description": "Your Phone Number",
+      "description": "Your Phone Number"
     }
   }
 }
