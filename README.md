@@ -2,7 +2,7 @@
 
 電話でメールを読みあげるPython 3のサンプルコードです。
 
-[SendGrid](https://sendgrid.kke.co.jp/)からPOSTされた内容を、[Twilio](http://twilio.kddi-web.com/)の[音声通話API](https://jp.twilio.com/docs/api/rest/making-calls)に橋渡します。
+[SendGrid](https://sendgrid.kke.co.jp/)からPOSTされた内容を、[Twilio](http://twilio.kddi-web.com/)の[音声通話API](https://jp.twilio.com/docs/api/rest/making-calls)に橋渡しをします。
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
