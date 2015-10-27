@@ -2,13 +2,24 @@
 
 電話でメールを読みあげるPython 3のサンプルコードです。
 
-[SendGrid](https://sendgrid.kke.co.jp/)の[Parse Webhook](https://sendgrid.kke.co.jp/docs/API_Reference/Webhooks/parse.html)で受信したメールを、[Twilio](http://twilio.kddi-web.com/)で[音声通話](https://jp.twilio.com/docs/api/rest/making-calls)してもらいます。
+[SendGrid](https://sendgrid.kke.co.jp/)からPOSTされた内容を、[Twilio](http://twilio.kddi-web.com/)の[音声通話API](https://jp.twilio.com/docs/api/rest/making-calls)に橋渡します。
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-## 解説
+## 紹介記事
 
 TODO: Blog URL
+
+## SendGrid設定
+
+「SETTINGS > [Inbound Parse](https://app.sendgrid.com/settings/parse)」にて、Parse Webhookを設定します。
+
+HOSTには、宛先メールアドレスのドメインを指定します。
+通常は宛先ドメインのDNSにMXレコードを登録する必要がありますが、SendGridが開発用に用意している「bymail.in」ドメインを利用するとこの手順を省くことができます。
+この場合、「sgxxxxxx.bymail.in」のようにサブドメインを付加したものを入力します。
+ここで付加するサブドメインは、一意なものであればなんでも構いませんが、ユーザ名の@より前の部分を利用することを推奨しています。
+
+URLには、受信したメールの内容をPOSTするURL「（デプロイ先URL）/incoming」を指定します。
 
 ## 環境変数
 
@@ -21,11 +32,11 @@ TODO: Blog URL
 
 ## 動作確認環境
 
-次のファイルを参照してください。
-
-- runtime.txt
-- requirements.txt
-- Procfile
+| ファイル名 | 内容 |
+| --- | --- |
+| runtime.txt | Pythonのバージョン |
+| requirements.txt | Pythonのライブラリとバージョン |
+| Procfile | Webアプリケーションの起動コマンド |
 
 ## 参考元
 
