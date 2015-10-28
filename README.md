@@ -15,7 +15,7 @@ TODO: Blog URL
 「SETTINGS > [Inbound Parse](https://app.sendgrid.com/settings/parse)」にて、Parse Webhookを設定します。
 Parse Webhookは、指定HOSTのメールアドレスへ送信されたメールをパースして、その内容を指定URLにPOSTする機能です。
 
-HOSTには、SendGridが開発用に用意している「bymail.in」ドメインにサブドメインを付加したものを入力します。  
+HOSTには、SendGridが開発用に用意している「bymail.in」ドメインにサブドメインを付加したものを入力します。
 ここで付加するサブドメインは、一意なものであればなんでも構いませんが、ユーザ名の@より前の部分を利用して「sgxxxxxx.bymail.in」のようにすることを推奨しています。
 実際に使う宛先メールアドレスのローカルパートは何でも構いません。
 
