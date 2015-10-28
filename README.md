@@ -2,7 +2,7 @@
 
 電話でメールを読みあげるPython 3のサンプルコードです。
 
-[SendGrid](https://sendgrid.kke.co.jp/)からPOSTされた内容を、[Twilio](http://twilio.kddi-web.com/)の[音声通話API](https://jp.twilio.com/docs/api/rest/making-calls)に橋渡しします。
+[SendGrid](https://sendgrid.kke.co.jp/)の[Parse Webhook](https://sendgrid.kke.co.jp/docs/API_Reference/Webhooks/parse.html)からPOSTされた内容を、[Twilio](http://twilio.kddi-web.com/)の[音声通話API](https://jp.twilio.com/docs/api/rest/making-calls)に橋渡しします。
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
@@ -10,14 +10,13 @@
 
 TODO: Blog URL
 
-## SendGrid設定
+## SendGridの設定
 
 「SETTINGS > [Inbound Parse](https://app.sendgrid.com/settings/parse)」にて、Parse Webhookを設定します。
+Parse Webhookは、指定HOSTのメールアドレスへ送信されたメールをパースして、その内容を指定URLにPOSTする機能です。
 
-HOSTには、宛先メールアドレスのドメインを指定します。  
-通常は宛先ドメインのDNSにMXレコードを登録する必要がありますが、SendGridが開発用に用意している「bymail.in」ドメインを利用するとこの手順を省くことができます。
-この場合、「sgxxxxxx.bymail.in」のようにサブドメインを付加したものを入力します。
-ここで付加するサブドメインは、一意なものであればなんでも構いませんが、ユーザ名の@より前の部分を利用することを推奨しています。  
+HOSTには、SendGridが開発用に用意している「bymail.in」ドメインにサブドメインを付加したものを入力します。  
+ここで付加するサブドメインは、一意なものであればなんでも構いませんが、ユーザ名の@より前の部分を利用して「sgxxxxxx.bymail.in」のようにすることを推奨しています。
 実際に使う宛先メールアドレスのローカルパートは何でも構いません。
 
 URLには、受信したメールの内容をPOSTするURL「（デプロイ先URL）/incoming」を指定します。
@@ -29,7 +28,7 @@ URLには、受信したメールの内容をPOSTするURL「（デプロイ先U
 | TWILIO_ACCOUNT_SID | TwilioのACCOUNT SID |
 | TWILIO_AUTH_TOKEN | TwilioのAUTH TOKEN |
 | TWILIO_PHONE_NUMBER | Twilioの国際電話番号 |
-| YOUR_PHONE_NUMBER | 手持ちの国際電話番号（日本の場合は81始まり） |
+| YOUR_PHONE_NUMBER | お手持ちの電話の国際電話番号（日本の場合は81始まり） |
 
 ## 動作確認環境
 
