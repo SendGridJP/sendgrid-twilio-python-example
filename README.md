@@ -8,7 +8,7 @@
 
 ## 紹介記事
 
-TODO: Blog URL
+- [Twilioのアリスに電話でメールを読みあげてもらう方法](https://sendgrid.kke.co.jp/blog/?p=4306)
 
 ## SendGridの設定
 
